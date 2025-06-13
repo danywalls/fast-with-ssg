@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {GifsService} from '../../services/gifs.service';
 
 @Component({
   selector: 'app-home',
@@ -8,4 +9,6 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  gifService = inject(GifsService)
+  gifs = this.gifService.gifResource
 }
